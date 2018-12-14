@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	id="WebApp_ID" version="3.1">
+	<display-name>servlet_20181122</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+<!-- 
+	<servlet>
+		<servlet-name>식별자</servlet-name>
+		<servlet-class>패키지명.서블릿클래스</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>식별자</servlet-name>
+		<url-pattern>사용자 요청 주소</url-pattern>
+	</servlet-mapping>
+-->
+
+	<servlet>
+		<servlet-name>hello</servlet-name>
+		<servlet-class>com.test.Sample001</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>hello</servlet-name>
+		<url-pattern>/hello/sub</url-pattern>
+		<url-pattern>/hello/main.it</url-pattern>
+		<url-pattern>/hello/default.html</url-pattern>
+		<url-pattern>/hello</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>now</servlet-name>
+		<servlet-class>com.test.Sample002</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>now</servlet-name>
+		<url-pattern>/now</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet-mapping>
+		<servlet-name>jsp</servlet-name>
+		<url-pattern>*.jsp</url-pattern>
+		<url-pattern>*.jspx</url-pattern>
+	</servlet-mapping>
+	
+</web-app>
