@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	id="WebApp_ID" version="3.1">
+	<display-name>servlet_20181122</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+<!-- 
+	<servlet>
+		<servlet-name>식별자</servlet-name>
+		<servlet-class>패키지명.서블릿클래스</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>식별자</servlet-name>
+		<url-pattern>사용자 요청 주소</url-pattern>
+	</servlet-mapping>
+-->
+
+	<servlet>
+		<servlet-name>gugudan</servlet-name>
+		<servlet-class>com.test.Sample003</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>gugudan</servlet-name>
+		<url-pattern>/gugudan</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>sample004_send</servlet-name>
+		<servlet-class>com.test.Sample004_send</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>sample004_send</servlet-name>
+		<url-pattern>/sample004_send</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>sample004_receive</servlet-name>
+		<servlet-class>com.test.Sample004_receive</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>sample004_receive</servlet-name>
+		<url-pattern>/sample004_receive</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>sample005</servlet-name>
+		<servlet-class>com.test.Sample005</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>sample005</servlet-name>
+		<url-pattern>/sample005</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>sample006</servlet-name>
+		<servlet-class>com.test.Sample006</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>sample006</servlet-name>
+		<url-pattern>/sample006</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>sample006_insert</servlet-name>
+		<servlet-class>com.test.Sample006_insert</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>sample006_insert</servlet-name>
+		<url-pattern>/sample006_insert</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>guestbook_design</servlet-name>
+		<servlet-class>com.test.Guestbook_design</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>guestbook_design</servlet-name>
+		<url-pattern>/guestbook_design</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>guestbook_insert</servlet-name>
+		<servlet-class>com.test.Guestbook_insert</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>guestbook_insert</servlet-name>
+		<url-pattern>/guestbook_insert</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>guestbook_delete</servlet-name>
+		<servlet-class>com.test.Guestbook_delete</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>guestbook_delete</servlet-name>
+		<url-pattern>/guestbook_delete</url-pattern>
+	</servlet-mapping>
+
+	
+</web-app>
