@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	id="WebApp_ID" version="3.1">
+	<display-name>employeemvc_20181206</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+
+	<session-config>
+		<session-timeout>10</session-timeout>
+	</session-config>
+
+
+
+	<filter>
+		<filter-name>encodingFilter</filter-name>
+		<filter-class>com.filter.CharacterEncodingFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>encodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+
+	<filter>
+		<filter-name>loginFilter</filter-name>
+		<filter-class>com.filter.LoginFilter</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>loginFilter</filter-name>
+		<url-pattern>/employee/*</url-pattern>
+		<url-pattern>/region/*</url-pattern>
+		<url-pattern>/department/*</url-pattern>
+		<url-pattern>/position/*</url-pattern>
+		<url-pattern>/admin/*</url-pattern>
+	</filter-mapping>
+
+<!-- 
+
+	<filter>
+		<filter-name>LoginTimeFilter</filter-name>
+		<filter-class>com.filter.LoginTimeFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>LoginTimeFilter</filter-name>
+		<url-pattern>/employee/*</url-pattern>
+		<url-pattern>/region/*</url-pattern>
+		<url-pattern>/department/*</url-pattern>
+		<url-pattern>/position/*</url-pattern>
+		<url-pattern>/admin/*</url-pattern>
+	</filter-mapping>
+
+
+
+ -->
+
+	<servlet>
+		<servlet-name>login</servlet-name>
+		<servlet-class>com.controller.LoginController</servlet-class>
+		<init-param>
+			<param-name>configFile</param-name>
+			<param-value>/WEB-INF/login.properties</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>login</servlet-name>
+		<url-pattern>/index</url-pattern>
+		<url-pattern>/login/*</url-pattern>
+	</servlet-mapping>
+
+
+
+
+
+	<servlet>
+		<servlet-name>emp</servlet-name>
+		<servlet-class>com.controller.EmployeeController</servlet-class>
+		<init-param>
+			<param-name>configFile</param-name>
+			<param-value>/WEB-INF/employee.properties</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>emp</servlet-name>
+		<url-pattern>/employee/*</url-pattern>
+		<url-pattern>/region/*</url-pattern>
+		<url-pattern>/department/*</url-pattern>
+		<url-pattern>/position/*</url-pattern>
+		<url-pattern>/admin/*</url-pattern>
+	</servlet-mapping>
+
+
+</web-app>
